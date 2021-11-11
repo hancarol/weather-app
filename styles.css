@@ -18,7 +18,9 @@ a {
   font-size: 25px;
 }
 
-p, #github {
+p,
+#github,
+#netlify {
   text-align: center;
   font-size: small;
 }
