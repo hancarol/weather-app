@@ -1,0 +1,103 @@
+body {
+  font-family: "PT Mono", monospace;
+}
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+h2 {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  font-size: 25px;
+}
+#slash {
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+  right: 8px;
+}
+
+a:hover {
+  color: black;
+}
+
+#weather-description {
+  text-transform: capitalize;
+}
+
+#main-temperature {
+  position: relative;
+  left: 31px;
+}
+
+#celsius {
+  position: relative;
+  right: -17px;
+}
+
+#fahrenheit {
+  position: relative;
+  right: 35px;
+}
+
+.sun {
+  font-size: 200px;
+  color: #f7c847;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+
+.smallSun {
+  color: #f7c847;
+  margin: 20px 0;
+  font-size: 50px;
+}
+
+.cloud,
+.rain,
+.cloudy {
+  font-size: 50px;
+  margin: 20px 0;
+  color: gray;
+}
+
+.card {
+  background: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+}
+
+.main-temp {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+}
+.main-data {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.insideTable {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.cardBodyInsideTable {
+  margin-top: 10px;
+  margin-left: 180px;
+  text-align: center;
+}
+
+.col-2 {
+  font-weight: bold;
+}
