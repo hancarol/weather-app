@@ -28,7 +28,9 @@ p,
   text-decoration: none;
   font-size: 25px;
   position: relative;
-  right: 8px;
+  right: 42px;
+  bottom: 16px;
+
 }
 
 a:hover {
@@ -37,28 +39,32 @@ a:hover {
 
 #weather-description {
   text-transform: capitalize;
+  position:relative;
+  right: 61px;
 }
 
 #main-temperature {
   position: relative;
-  left: 31px;
+  /* left: 31px; */
 }
 
 #celsius {
   position: relative;
-  right: -17px;
+  right: 16px;
+  bottom: 14px;
 }
 
 #fahrenheit {
   position: relative;
-  right: 35px;
+  right: 70px;
+  bottom: 14px;
+
 }
 
-.sun {
-  font-size: 200px;
-  color: #f7c847;
-  margin-left: 120px;
-  margin-top: 20px;
+#main-icon {
+
+  margin-left: 185px;
+  margin-top: 60px;
 }
 
 .smallSun {
