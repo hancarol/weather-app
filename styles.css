@@ -30,7 +30,6 @@ p,
   position: relative;
   right: 42px;
   bottom: 16px;
-
 }
 
 a:hover {
@@ -39,13 +38,8 @@ a:hover {
 
 #weather-description {
   text-transform: capitalize;
-  position:relative;
-  right: 61px;
-}
-
-#main-temperature {
   position: relative;
-  /* left: 31px; */
+  right: 61px;
 }
 
 #celsius {
@@ -58,11 +52,9 @@ a:hover {
   position: relative;
   right: 70px;
   bottom: 14px;
-
 }
 
 #main-icon {
-
   margin-left: 185px;
   margin-top: 60px;
 }
