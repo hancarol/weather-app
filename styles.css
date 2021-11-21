@@ -32,10 +32,6 @@ p,
   bottom: 16px;
 }
 
-a:hover {
-  color: black;
-}
-
 #weather-description {
   text-transform: capitalize;
   position: relative;
@@ -52,6 +48,7 @@ a:hover {
   position: relative;
   right: 70px;
   bottom: 14px;
+
 }
 
 #main-icon {
@@ -105,4 +102,9 @@ a:hover {
 
 .col-2 {
   font-weight: bold;
+}
+
+.main-temp .active{
+  color: black;
+  cursor: default;
 }
