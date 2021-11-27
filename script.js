@@ -25,6 +25,28 @@ function time() {
   h2.innerHTML = `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastWeather = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs"];
+  days.forEach(function (day) {
+    forecastWeather =
+      forecastWeather +
+      `
+                <div class="col-2">
+                 ${day}
+                  <p>
+                    <i class="fas fa-cloud-rain rain"></i>
+                  </p>
+                  <p>Rainy</p>
+                  <p>68°/55°</p>
+                </div>
+              `;
+  });
+  forecastWeather = forecastWeather + `</div>`;
+  forecastElement.innerHTML = forecastWeather;
+}
+
 function showWeather(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
   let iconElement = document.querySelector("#main-icon");
@@ -106,3 +128,4 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
 
 showCity("new york");
+displayForecast();
