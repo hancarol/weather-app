@@ -24,24 +24,35 @@ function time() {
 
   h2.innerHTML = `${day} ${hours}:${minutes}`;
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastWeather = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs"];
-  days.forEach(function (day) {
-    forecastWeather =
-      forecastWeather +
-      `
+  forecast.forEach(function (day, index) {
+    if (index < 5) {
+      forecastWeather =
+        forecastWeather +
+        `
                 <div class="col-2">
-                 ${day}
-                  <p>
-                    <i class="fas fa-cloud-rain rain"></i>
-                  </p>
-                  <p>Rainy</p>
-                  <p>68°/55°</p>
+                  <p>${formatDay(day.dt)}</p>
+                  <img src="http://openweathermap.org/img/wn/${
+                    day.weather[0].icon
+                  }@2x.png" alt="weather-image" /> 
+                  
+                  <p>${day.weather[0].main}</p>
+                  <p>${Math.round(day.temp.min)}°/${Math.round(
+          day.temp.max
+        )}°</p>
                 </div>
               `;
+    }
   });
   forecastWeather = forecastWeather + `</div>`;
   forecastElement.innerHTML = forecastWeather;
